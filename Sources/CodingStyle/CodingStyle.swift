@@ -6,8 +6,8 @@
 //
 
 @propertyWrapper
-struct CodingStyle {
-    enum Style: Character, CaseIterable {
+public struct CodingStyle {
+    public enum Style: Character, CaseIterable {
         case camelCase = " "
         case snakeCase = "_"
         case kebabCase = "-"
@@ -26,7 +26,7 @@ struct CodingStyle {
         set { style = newValue }
     }
     
-    init(wrappedValue: String, _ style: Style) {
+    public init(wrappedValue: String, _ style: Style) {
         self.value = wrappedValue
         self.style = style
     }
